@@ -1,0 +1,145 @@
+
+.spanner{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color:Sienna;
+    
+}
+.spanner .spinner-border{
+    margin-top: 300px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid ;
+    border-bottom: 10px solid transparent;
+}
+body{
+    background-color: lightblue;
+}
+.dark{
+    background-color: black;
+}
+.home {
+
+    margin: 20PX auto;
+    height: 500px;
+    border-radius: 10px;
+    background-color: seaGreen;
+    overflow: hidden;
+}
+
+.home form {
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+.home form i{
+    display: flex;
+    justify-content: end;
+    color: black;
+}
+.home form button{
+    background-color:Sienna;
+    color:white;
+    font-weight: bold;
+}
+.home form button:hover{
+    background-color: SaddleBrown;
+    color: white;
+}
+h1{
+    text-align: center;
+    color:  SaddleBrown;
+}
+.list{
+    height: auto;
+    border-radius: 10px;
+    background-color: seaGreen;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+.list h2{
+    margin-top: 20px;
+    font-size: 25px;
+    background-color:  rgba(139, 69, 19, 0.673);
+    height: 50px;
+    color:seaGreen ;
+    padding-top: 7px;
+    border-radius: 10px;
+}
+.gallery{
+    margin-top: 50px;
+    padding: 0;
+    height: 500px;
+}
+.gallery .images {
+    height: 100px;
+}
+.gallery .images img{
+   margin-top: 20px;
+   margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.gallery .images h3{
+    position: relative;
+    bottom: 30px;
+    margin-left: 400px;
+    color: SaddleBrown;
+}
+.gallery .bigimage{ 
+    height: 400px;
+
+}
+.gallery .bigimage img{
+    width: 600px;
+    height: 400px;
+}
+.ALLACC{
+    margin-top: 70px;
+}
+.ALLACC .accourdion button{
+    width: 100%;
+    border: none;
+    background-color:seagreen ;
+    color: SaddleBrown;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.ALLACC .accourdion i{
+    transition: all 2s;
+}
+.ALLACC .accourdion .item {
+    height: 0;
+    overflow: hidden;
+    transition: all 2s;
+  
+}
+.ALLACC .accourdion .item p{
+    color: SaddleBrown;
+    margin: 0;
+    font-weight: bold;
+    background-color: rgba(46, 139, 86, 0.923);
+    border-radius: 5px;
+
+}
+@media (max-width:780px) {
+    
+    .gallery .bigimage img{
+        width: 300px;
+        height: 400px;
+    }
+    .gallery .images h3{
+        position: relative;
+        bottom: 90px;
+        margin-left: 40px;
+        color: SaddleBrown;
+    }
+
+}
+   
