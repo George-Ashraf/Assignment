@@ -14,33 +14,46 @@
 <body>
 
     <div class="home col-lg-6">
-        <form>
-            <i class="fa-solid fa-moon"></i>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Assignment Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text">We will not accept copied assignments</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Assignment Date </label>
-                <input type="date" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Name</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Your Photo</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button class="btn">Add Assignment </button>
-        </form>
+
+        <i class="fa-solid fa-moon"></i>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Assignment Name</label>
+            <input id="inputassign" type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+                 <div class=" hide alert alert-danger" id="validationmessage">
+                  <span id="vms">
+
+                  </span>
+                    <i id="closevalidationmessage" class="fa-solid fa-rectangle-xmark "></i>
+                 </div>
+
+            <small id="emailHelp" class="form-text">We will not accept copied assignments</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Assignment Date </label>
+            <input id="inputassign" type="date" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input id="inputassign" type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Your URL Photo</label>
+            <input id="inputassign" type="url" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button id="assignbtn" class="btn">Add Assignment </button>
+
     </div>
     <h1>Assignment List</h1>
-    <div class="list col-lg-6">
-        <h2>No Assignments Added yet</h2>
-    </div>
+    
+        <div id="noassign" class="list col-lg-6">
+            <h2 class="textstyle">No Assignments Added yet</h2>
+        </div>
+        <div id="allassign" class="list  col-lg-6">
+
+        </div>
    
+
     <div class="container-fluid">
         <div class="row">
             <div class="gallery col-lg-6">
@@ -63,7 +76,8 @@
                     <div class="item ">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cum velit architecto nam
                             reprehenderit
-                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem maiores
+                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem
+                            maiores
                             natus a pariatur.</p>
                     </div>
                 </div>
@@ -72,7 +86,8 @@
                     <div class="item ">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cum velit architecto nam
                             reprehenderit
-                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem maiores
+                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem
+                            maiores
                             natus a pariatur.</p>
                     </div>
                 </div>
@@ -81,9 +96,12 @@
                     <div class="item ">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cum velit architecto nam
                             reprehenderit
-                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem maiores
-                            natus a pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos culpa labore ad,
-                            veritatis minus voluptate maiores blanditiis dicta harum, nisi quis voluptatem doloremque explicabo
+                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem
+                            maiores
+                            natus a pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos culpa labore
+                            ad,
+                            veritatis minus voluptate maiores blanditiis dicta harum, nisi quis voluptatem doloremque
+                            explicabo
                             incidunt odio quidem autem est a!</p>
                     </div>
                 </div>
@@ -92,7 +110,8 @@
                     <div class="item ">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cum velit architecto nam
                             reprehenderit
-                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem maiores
+                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem
+                            maiores
                             natus a pariatur.</p>
                     </div>
                 </div>
@@ -101,7 +120,8 @@
                     <div class="item ">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cum velit architecto nam
                             reprehenderit
-                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem maiores
+                            iste, repudiandae sequi laudantium quae adipisci et ullam, fugiat, dignissimos labore quidem
+                            maiores
                             natus a pariatur.</p>
                     </div>
                 </div>

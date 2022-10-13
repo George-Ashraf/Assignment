@@ -21,32 +21,69 @@ body{
 .dark{
     background-color: black;
 }
+.hide{
+    display: none;
+}
+.alert{
+    height: 45px;
+    font-size: 16px;
+}
+.red{
+    border: red 2px solid;
+}
+.green{
+    border: green 2px solid;
+}
+.checked{
+    text-decoration: line-through;
+}
+#closevalidationmessage{
+    color: red;
+    float: right;
+    cursor: pointer;
+}
+#allassign div{
+    margin-top: 15px;
+    font-size: 25px;
+    background-color:  rgba(139, 69, 19, 0.673);
+    height: 50px;
+    color:seaGreen ;
+    padding-top: 7px;
+    border-radius: 7px;
+    position: relative;
+    bottom: 8px;
+    
+}
+#allassign i{
+    float: right;
+    margin-right: 15px;
+    margin-top: 5px;
+    cursor: pointer;
+}
 .home {
 
     margin: 20PX auto;
-    height: 500px;
+    height: 550px;
     border-radius: 10px;
     background-color: seaGreen;
     overflow: hidden;
-}
-
-.home form {
-    margin-top: 20px;
     font-weight: bold;
     color: white;
     font-size: 20px;
 }
-.home form i{
+
+.home .fa-moon{
+    margin-top: 10px;
     display: flex;
     justify-content: end;
     color: black;
 }
-.home form button{
+.home button{
     background-color:Sienna;
     color:white;
     font-weight: bold;
 }
-.home form button:hover{
+.home button:hover{
     background-color: SaddleBrown;
     color: white;
 }
@@ -55,21 +92,25 @@ h1{
     color:  SaddleBrown;
 }
 .list{
-    height: auto;
+    height: 80px;
     border-radius: 10px;
     background-color: seaGreen;
     margin: auto;
     text-align: center;
     overflow: hidden;
 }
-.list h2{
-    margin-top: 20px;
+ h2{
+    margin-top: 15px;
     font-size: 25px;
     background-color:  rgba(139, 69, 19, 0.673);
     height: 50px;
     color:seaGreen ;
     padding-top: 7px;
-    border-radius: 10px;
+    border-radius: 7px;
+}
+#allassign{
+    text-align: left;
+    height: auto;
 }
 .gallery{
     margin-top: 50px;
