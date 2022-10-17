@@ -206,7 +206,17 @@ h1{
         bottom: 90px;
         margin-left: 40px;
         color: SaddleBrown;
+
     }
+    #allassign i{
+        float: right;
+        margin-right: 15px;
+        margin-top: 5px;
+        margin-left: 0px;
+        cursor: pointer;
+    }
+    
+    
 
 }
    
