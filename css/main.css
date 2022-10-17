@@ -53,23 +53,31 @@ body{
     position: relative;
     bottom: 8px;
     
+    
+    
 }
+
 #allassign i{
     float: right;
     margin-right: 15px;
     margin-top: 5px;
+    margin-left: 170px;
     cursor: pointer;
 }
 .home {
-
     margin: 20PX auto;
-    height: 550px;
+    height: auto;
+    padding-bottom: 30px;
     border-radius: 10px;
     background-color: seaGreen;
     overflow: hidden;
     font-weight: bold;
     color: white;
     font-size: 20px;
+    display: none;
+}
+.form-group{
+    display: none;
 }
 
 .home .fa-moon{
@@ -82,6 +90,7 @@ body{
     background-color:Sienna;
     color:white;
     font-weight: bold;
+    display: none;
 }
 .home button:hover{
     background-color: SaddleBrown;
@@ -90,6 +99,7 @@ body{
 h1{
     text-align: center;
     color:  SaddleBrown;
+    display: none;
 }
 .list{
     height: 80px;
@@ -98,6 +108,7 @@ h1{
     margin: auto;
     text-align: center;
     overflow: hidden;
+    
 }
  h2{
     margin-top: 15px;
@@ -168,6 +179,21 @@ h1{
     background-color: rgba(46, 139, 86, 0.923);
     border-radius: 5px;
 
+}
+.goup{
+    position: fixed;
+    bottom: 5px;
+    right: 30px;
+    z-index: 99999999;
+    background-color: SaddleBrown;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 1s;
+}
+.goup i{
+    padding:20px ;
+    font-size: 30px;
+    color:seagreen;
 }
 @media (max-width:780px) {
     

@@ -48,9 +48,9 @@ let inputassign =document.querySelectorAll('#inputassign')
 let assignbtn =document.getElementById('assignbtn')
 let noassign=document.getElementById('noassign')
 let allassign=document.getElementById('allassign')
-let validationmessage=document.getElementById('validationmessage')
-let vms=document.getElementById('vms')
-let closevalidationmessage=document.getElementById("closevalidationmessage")
+let validationmessage=document.querySelectorAll('#validationmessage')
+let vms=document.querySelectorAll('#vms')
+let closevalidationmessage=document.querySelectorAll("#closevalidationmessage")
 
 let shownoassignmessage=()=>{
    if( allassign.childElementCount==0)
@@ -58,34 +58,101 @@ let shownoassignmessage=()=>{
     noassign.classList.remove('hide')
    }
 }
-let removevalidationmessage=()=>{
-    validationmessage.classList.add('hide')
-}
+
+for (let i = 0; i < validationmessage.length; i++) {
+    closevalidationmessage[i].addEventListener('click', function () {
+        validationmessage[i].classList.add('hide');
+    })
+  }
 let addassign=()=>{
-    let assignvalue=inputassign[0].value
-    if(assignvalue.trim()=="" ||assignvalue.length<3||assignvalue.length>20)
+    let assignname=inputassign[0].value
+    let assigndate=inputassign[1].value
+    let name=inputassign[2].value
+    let url=inputassign[3].value
+
+    if(assignname.trim()=="" ||assignname.length<3||assignname.length>20)
     {
         inputassign[0].classList.add('red')
-        validationmessage.classList.remove('hide')
+        validationmessage[0].classList.remove('hide')
        
-     if(assignvalue.trim()==""){
-        vms.innerHTML="please enter data"
+     if(assignname.trim()==""){
+        vms[0].innerHTML="please enter data"
+        
      }
-     else if(assignvalue.length<3){
-        vms.innerHTML="please enter data more than 3 char"
+     else if(assignname.length<3){
+        vms[0].innerHTML="please enter data more than 3 char"
+        
      }
-     else if(assignvalue.length>20){
-        vms.innerHTML="please enter data less than 20 char"
+     else if(assignname.length>20){
+        vms[0].innerHTML="please enter data less than 20 char"
+       
      }
+    }
+    if(assigndate.trim()=="" ||assigndate.length<3||assigndate.length>20)
+    {
+        inputassign[1].classList.add('red')
+        validationmessage[1].classList.remove('hide')
+       
+     if(assigndate.trim()==""){
+        vms[1].innerHTML="please enter data"
+     }
+     else if(assigndate.length<3){
+        vms[1].innerHTML="please enter data more than 3 char"
+     }
+     else if(assigndate.length>20){
+        vms[1].innerHTML="please enter data less than 20 char"
+     }
+    }
+    if(name.trim()=="" ||name.length<3||name.length>20)
+    {
+        inputassign[2].classList.add('red')
+        validationmessage[2].classList.remove('hide')
+       
+     if(name.trim()==""){
+        vms[2].innerHTML="please enter data"
+        
+     }
+     else if(name.length<3){
+        vms[2].innerHTML="please enter data more than 3 char"
+        
+     }
+     else if(name.length>20){
+        vms[2].innerHTML="please enter data less than 20 char"
+       
+     }
+    }
+    if(url.trim()=="" ||url.length<3)
+    {
+        inputassign[3].classList.add('red')
+        validationmessage[3].classList.remove('hide')
+       
+     if(url.trim()==""){
+        vms[3].innerHTML="please enter data"
+        
+     }
+     else if(url.length<3){
+        vms[3].innerHTML="please enter data more than 3 char"
+        
+     }
+     
     }
     else{
         inputassign[0].classList.replace('red','green')
-        removevalidationmessage()
+        for (let i = 0; i < validationmessage.length; i++) {
+            validationmessage[i].classList.add('hide');
+          }
     noassign.classList.add('hide')
-    allassign.innerHTML+=`<div class=" task list ">${assignvalue}
+    allassign.innerHTML+=`<div class=" task list ">
+    ${assignname}:<img width="30px"height="20px" src="${url}">:${name}
     <i class=" delete fa-solid fa-trash"></i>
+    <span class="float-right">
+    ${assigndate}
+    </span>
     <div>`
     inputassign[0].value=""
+    inputassign[1].value=""
+    inputassign[2].value=""
+    inputassign[3].value=""
     allassign.addEventListener("click",function(e){
         if(e.target.classList.contains('task')){
 
@@ -95,12 +162,46 @@ let addassign=()=>{
 }
 }
 assignbtn.addEventListener('click',addassign)
-closevalidationmessage.addEventListener("click",removevalidationmessage)
 document.addEventListener('click',function(t){
     if(t.target.classList.contains('delete')){
         t.target.parentElement.remove()
         shownoassignmessage()
     }
+})
+//JQuery
+$(document).ready(function(){
+    $(window).scroll(function(){
+        let scrollnumber=$(window).scrollTop()
+        console.log(scrollnumber);
+              if(scrollnumber>468){
+                $(".goup").css("opacity","1")
+           
+              }
+              else{
+                $(".goup").css("opacity","0")
+               
+              }
+    })
+
+$(".home").slideDown(1000,function(){
+    $('.form-group').eq(0).slideDown(1000,function(){
+        $('.form-group').eq(1).slideDown(1000,function(){
+            $('.form-group').eq(2).slideDown(1000,function(){
+                $('.form-group').eq(3).slideDown(1000,function(){
+                    $(".btn").slideDown(1000,function(){
+                        $('h1').slideDown(1000)
+                            
+                        
+                    })
+                })
+            })
+        })
+    })
+})
+
+
+
+
 })
 
 
